@@ -1,0 +1,27 @@
+.container {
+  background-color: var(--card-bg-secondary);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: var(--radius);
+  padding: 27px 32px;
+  align-items: center;
+}
+
+.info {
+}
+
+.title {
+  color: var(--text-color-white);
+  margin-bottom: 8px;
+}
+
+.dollars {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-color-white);
+}
+
+/* .logo {
+  height: 12px;
+} */
