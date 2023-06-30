@@ -38,10 +38,10 @@ body {
   background-color: var(--cream-bg);
   font-family: var(--font-family);
   /* display: flex; */
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin-top: 50px;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* height: 100vh; */
+  /* min-height: 450px; */
 }
 
 h1,
