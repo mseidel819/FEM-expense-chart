@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
 - Solution URL: [Github](https://github.com/mseidel819/FEM-expense-chart)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://gleeful-semifreddo-30750d.netlify.app/)
 
 ## My process
 
