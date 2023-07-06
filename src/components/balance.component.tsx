@@ -1,6 +1,5 @@
 import styles from "./balance.module.css";
 import { ReactComponent as Logo } from "../assets/discover-logo.svg";
-// import DiscoverLogo from "../assets/discover-logo.svg";
 
 const Balance = () => {
   return (

@@ -18,7 +18,7 @@ const Graph = ({ data }: DataProps) => {
   const [width, setWidth] = useState(0);
   // const containerRef = useRef();
 
-  const svgRef = useRef();
+  const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
     const element = document.getElementById("app-container");
@@ -40,7 +40,7 @@ const Graph = ({ data }: DataProps) => {
 
     // Create the SVG container
     const svg = d3
-      .select(svgRef.current ?? "")
+      .select(svgRef.current)
       .attr("width", width)
       .attr("height", height);
 
@@ -59,7 +59,8 @@ const Graph = ({ data }: DataProps) => {
     const yScale = d3
       .scaleLinear()
       .range([chartHeight, 0])
-      .domain([0, d3.max(data, (d) => d.amount)]);
+      // .domain([0, d3.max(data, (d) => d.amount)]);
+      .domain([0, d3.max(data, (d) => d.amount as number) ?? 0]);
 
     // Create the x-axis
     chart
