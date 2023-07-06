@@ -25,7 +25,7 @@ const Graph = ({ data }: DataProps) => {
 
     const resizeHandler = () => {
       if (!element?.clientWidth) return;
-      setWidth(element.clientWidth - 60);
+      setWidth(element.clientWidth - 80);
     };
     resizeHandler();
     console.log("width", width);
