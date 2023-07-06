@@ -26,3 +26,9 @@
 .percent {
   font-weight: 700;
 }
+
+@media (max-width: 540px) {
+  .total_number {
+    font-size: 30px;
+  }
+}

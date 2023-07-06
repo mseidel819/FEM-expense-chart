@@ -15,7 +15,7 @@ const Graph = ({ data }: DataProps) => {
   const [tooltipPosition, setTooltipPosition] = useState<[number, number]>([
     0, 0,
   ]);
-  const [width, setWidth] = useState();
+  const [width, setWidth] = useState(0);
   // const containerRef = useRef();
 
   const svgRef = useRef();
@@ -109,23 +109,6 @@ const Graph = ({ data }: DataProps) => {
       window.removeEventListener("resize", resizeHandler);
     };
   }, [data, width]);
-
-  // useEffect(() => {
-  //   if (!containerRef.current) return;
-  //   // Update the chart width when the container width changes
-  //   const resizeObserver = new ResizeObserver((entries) => {
-  //     for (const entry of entries) {
-  //       const containerWidth = entry.contentRect.width;
-  //       if (svgRef.current)
-  //         svgRef.current.setAttribute("width", containerWidth);
-  //     }
-  //   });
-  //   resizeObserver.observe(containerRef.current);
-
-  //   return () => {
-  //     resizeObserver.disconnect();
-  //   };
-  // }, []);
 
   return (
     <div style={{ position: "relative" }}>
