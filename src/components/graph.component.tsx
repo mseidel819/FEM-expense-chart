@@ -34,7 +34,7 @@ const Graph = ({ data }: DataProps) => {
     window.addEventListener("resize", resizeHandler);
 
     const height = 178;
-    const margin = { top: 0, right: 0, bottom: 32, left: 0 };
+    const margin = { top: 0, right: 0, bottom: 24, left: 0 };
     const chartWidth = width - margin.left - margin.right;
     const chartHeight = height - margin.top - margin.bottom;
 

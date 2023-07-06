@@ -1,6 +1,7 @@
 .container {
   border-top: 1px solid var(--cream-bg);
   padding-top: 32px;
+  margin-top: 32px;
 }
 
 .monthly {
