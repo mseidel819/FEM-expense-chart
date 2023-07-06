@@ -80,7 +80,7 @@ const Graph = ({ data }: DataProps) => {
       .enter()
       .append("rect")
       .attr("class", "bar")
-      .attr("x", (d) => xScale(d.day))
+      .attr("x", (d: Data) => xScale(d.day) ?? 0)
       .attr("y", (d) => yScale(d.amount))
       .attr("width", xScale.bandwidth())
       .attr("height", (d) => chartHeight - yScale(d.amount))
