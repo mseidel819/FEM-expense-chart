@@ -13,14 +13,14 @@ function App() {
   }, 0);
 
   return (
-    <div className="app-container" id="app-container">
+    <main className="app-container" id="app-container">
       <Balance />
       <div className="bottom-container">
         <h1 className="app-title">Spending - Last 7 days</h1>
         <Graph data={data} />
         <Monthly total={total} />
       </div>
-    </div>
+    </main>
   );
 }
 
