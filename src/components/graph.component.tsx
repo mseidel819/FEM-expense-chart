@@ -15,14 +15,24 @@ const Graph = ({ data }: DataProps) => {
   const [tooltipPosition, setTooltipPosition] = useState<[number, number]>([
     0, 0,
   ]);
-
-  const containerRef = useRef();
+  const [width, setWidth] = useState();
+  // const containerRef = useRef();
 
   const svgRef = useRef();
 
   useEffect(() => {
-    // Define the dimensions of the chart
-    const width = 460;
+    const element = document.getElementById("app-container");
+
+    const resizeHandler = () => {
+      if (!element?.clientWidth) return;
+      setWidth(element.clientWidth - 60);
+    };
+    resizeHandler();
+    console.log("width", width);
+    if (!width) return;
+    //setWidth to change dynamically when screen size changes
+    window.addEventListener("resize", resizeHandler);
+
     const height = 178;
     const margin = { top: 0, right: 0, bottom: 32, left: 0 };
     const chartWidth = width - margin.left - margin.right;
@@ -94,27 +104,31 @@ const Graph = ({ data }: DataProps) => {
         // Hide the tooltip
         setTooltipData(undefined);
       });
-  }, [data]);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-    // Update the chart width when the container width changes
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        const containerWidth = entry.contentRect.width;
-        if (svgRef.current)
-          svgRef.current.setAttribute("width", containerWidth);
-      }
-    });
-    resizeObserver.observe(containerRef.current);
 
     return () => {
-      resizeObserver.disconnect();
+      window.removeEventListener("resize", resizeHandler);
     };
-  }, []);
+  }, [data, width]);
+
+  // useEffect(() => {
+  //   if (!containerRef.current) return;
+  //   // Update the chart width when the container width changes
+  //   const resizeObserver = new ResizeObserver((entries) => {
+  //     for (const entry of entries) {
+  //       const containerWidth = entry.contentRect.width;
+  //       if (svgRef.current)
+  //         svgRef.current.setAttribute("width", containerWidth);
+  //     }
+  //   });
+  //   resizeObserver.observe(containerRef.current);
+
+  //   return () => {
+  //     resizeObserver.disconnect();
+  //   };
+  // }, []);
 
   return (
-    <div ref={containerRef} style={{ position: "relative" }}>
+    <div style={{ position: "relative" }}>
       <svg ref={svgRef}></svg>
       {tooltipData && (
         <div
