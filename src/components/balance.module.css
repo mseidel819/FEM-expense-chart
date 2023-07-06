@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   border-radius: var(--radius);
-  padding: 27px 32px 25px 39px;
+  padding: 27px 39px 25px 32px;
   align-items: center;
 }
 
