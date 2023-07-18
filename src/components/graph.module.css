@@ -1,3 +1,12 @@
-.graph {
-  /* background-color: blue; */
+/* .graph {
+  background-color: blue;
+} */
+
+.bar {
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.bar:hover {
+  opacity: var(--bar-hover-opacity);
 }

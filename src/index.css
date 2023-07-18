@@ -20,7 +20,7 @@
   --bar-bg: var(--red);
   --bar-bg-active: var(--cyan);
 
-  --bar-hover-opacity: 0.8;
+  --bar-hover-opacity: 0.5;
 
   --radius: 20px;
   --radius-sm: 5px;
@@ -51,19 +51,6 @@ span {
   color: var(--text-color);
   font-weight: 400;
   font-size: 18px;
-}
-
-.bar {
-  /* fill: var(--bar-bg); */
-  rx: var(--radius-sm);
-  cursor: pointer;
-  /* opacity: 0.05; */
-  transition: all 0.1s ease-in;
-}
-
-.bar:hover {
-  opacity: var(--bar-hover-opacity);
-  /* fill: white; */
 }
 
 .tooltip {
