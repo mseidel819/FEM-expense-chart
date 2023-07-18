@@ -21,7 +21,7 @@ const Graph = ({ data }: DataProps) => {
 
   const height = 178;
   const margin = { top: 0, right: 0, bottom: 21, left: 0 };
-  const chartWidth = width - margin.left - margin.right;
+  const chartWidth = width - margin.left - margin.right + 8;
   const chartHeight = height - margin.top - margin.bottom;
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Graph = ({ data }: DataProps) => {
   const xScale = d3
     .scaleBand()
     .range([0, chartWidth])
-    .padding(0.18)
+    .padding(0.2)
     .domain(data.map((d) => d.day));
 
   const yScale = d3
@@ -53,7 +53,7 @@ const Graph = ({ data }: DataProps) => {
 
   return (
     <div id="svg-container" style={{ position: "relative" }}>
-      <svg className={styles.graph} viewBox={`0 0 ${width} ${height}`}>
+      <svg className={styles.graph} viewBox={`0 0 ${width + 8} ${height}`}>
         <g id="chart">
           {data.map((d, i) => {
             const barWidth = xScale.bandwidth();
