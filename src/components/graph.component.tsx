@@ -21,7 +21,7 @@ const Graph = ({ data }: DataProps) => {
 
   const height = 178;
   const margin = { top: 0, right: 0, bottom: 21, left: 0 };
-  const chartWidth = width - margin.left - margin.right + 8;
+  const chartWidth = width - margin.left - margin.right;
   const chartHeight = height - margin.top - margin.bottom;
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Graph = ({ data }: DataProps) => {
 
   return (
     <div id="svg-container" style={{ position: "relative" }}>
-      <svg className={styles.graph} viewBox={`0 0 ${width + 8} ${height}`}>
+      <svg className={styles.graph} viewBox={`0 0 ${width} ${height}`}>
         <g id="chart">
           {data.map((d, i) => {
             const barWidth = xScale.bandwidth();
@@ -98,7 +98,9 @@ const Graph = ({ data }: DataProps) => {
             <g
               key={tick}
               transform={`translate(${
-                xScale(tick) ? xScale(tick) + xScale.bandwidth() / 2 : 0
+                //ignore this type error
+
+                (xScale(tick) ?? 0) + xScale.bandwidth() / 2
               }, 0)`}>
               <text textAnchor="middle">{tick}</text>
             </g>
