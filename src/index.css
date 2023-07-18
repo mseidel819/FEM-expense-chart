@@ -53,21 +53,6 @@ span {
   font-size: 18px;
 }
 
-.tooltip {
-  background-color: var(--dark-brown);
-  padding: 8px;
-  border-radius: var(--radius-sm);
-  position: absolute;
-  transform: translate(-12.5%, -100%);
-  /* top: 0; */
-  /* transition: all 0.2s ease-in; */
-}
-
-.tooltip p {
-  color: var(--white);
-  font-weight: 700;
-}
-
 @media (max-width: 540px) {
   h1,
   h2,

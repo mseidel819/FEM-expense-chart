@@ -1,10 +1,20 @@
-/* .graph {
-  background-color: blue;
-} */
+.tooltip {
+  background-color: var(--dark-brown);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  position: absolute;
+  transform: translate(-50%, -100%);
+}
+
+.tooltip p {
+  color: var(--white);
+  font-weight: 700;
+}
 
 .bar {
   cursor: pointer;
-  transition: all 0.1s ease-in;
+  transition: opacity 0.1s ease-in;
+  position: absolute;
 }
 
 .bar:hover {

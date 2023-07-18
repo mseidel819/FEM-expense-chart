@@ -8,13 +8,21 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 66px;
+  padding: 0 40px;
 }
 
 .bottom-container {
   margin-top: 24px;
   background-color: var(--card-bg);
   border-radius: var(--radius);
-  padding: 32px 40px;
+  padding-top: 32px;
+}
+.graph-container {
+  padding: 0 28px;
+}
+
+.monthly-container {
+  padding: 0 40px 41px 40px;
 }
 
 @media (max-width: 540px) {

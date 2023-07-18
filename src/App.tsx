@@ -17,8 +17,12 @@ function App() {
       <Balance />
       <div className="bottom-container">
         <h1 className="app-title">Spending - Last 7 days</h1>
-        <Graph data={data} />
-        <Monthly total={total} />
+        <div id="graph-container" className="graph-container">
+          <Graph data={data} />
+        </div>
+        <div className="monthly-container">
+          <Monthly total={total} />
+        </div>
       </div>
     </main>
   );
