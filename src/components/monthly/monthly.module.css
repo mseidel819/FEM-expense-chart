@@ -1,0 +1,36 @@
+.container {
+  border-top: 2px solid var(--cream-bg);
+  padding-top: 32px;
+  margin-top: 32px;
+}
+
+.monthly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.text {
+  color: var(--text-color-light);
+}
+
+.total_number {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.percent {
+  font-weight: 700;
+}
+
+@media (max-width: 540px) {
+  .total_number {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,22 @@
+.tooltip {
+  background-color: var(--dark-brown);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  position: absolute;
+  transform: translate(-50%, -100%);
+}
+
+.tooltip p {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.bar {
+  cursor: pointer;
+  transition: opacity 0.1s ease-in;
+  position: absolute;
+}
+
+.bar:hover {
+  opacity: var(--bar-hover-opacity);
+}
