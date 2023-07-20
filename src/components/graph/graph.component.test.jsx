@@ -4,7 +4,7 @@ import { render, screen } from "@testing-library/react";
 import Graph from "./graph.component";
 
 //TODO mock the framer-motion library to get rid of animtions.
-//TODO expect the graph to have 7 bars, and have bar heights relative to the data.
+//TODO expect the graph to have bar heights relative to the data.
 
 const mockData = [
   { day: "mon", amount: 30 },
@@ -24,7 +24,8 @@ describe("Graph component", () => {
 
     const graphElement = screen.getByTestId("svg-container");
     const bars = screen.getAllByTestId("bar");
-    console.log(bars);
+
     expect(graphElement).toBeInTheDocument();
+    expect(bars.length).toBe(mockData.length);
   });
 });
